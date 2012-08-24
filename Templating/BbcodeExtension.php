@@ -74,7 +74,6 @@ class BbcodeExtension extends \Twig_Extension
         $messages = empty($messages) ? array() : json_decode(\file_get_contents($messages), true);
 
         $code = new Decoda($value,$messages);
-        $code->setStrict(false);
 
         $current_filter = $this->filter_sets[$filter];
 
